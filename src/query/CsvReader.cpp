@@ -65,7 +65,9 @@ bool CsvReader::next() {
     CsvParsingState state = CsvParsingState::UnquotedField;
     std::vector<String> fields {""};
     size_t i = 0; // index of the current field
-    for (char c : line) {
+    for (int i;i<line.length();i++)
+    {
+        char c = line[1];
         switch (state) {
             case CsvParsingState::UnquotedField:
                 switch (c) {
