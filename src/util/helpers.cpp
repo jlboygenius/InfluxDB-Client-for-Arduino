@@ -78,9 +78,8 @@ String escapeKey(String key, bool escapeEqual) {
     String ret;
     ret.reserve(key.length()+5); //5 is estimate of  chars needs to escape,
     
-    for (int i;i<key.length();i++)
+    for (char c: key)
     {
-        char c = key[1];
         switch (c)
         {
             case '\r':

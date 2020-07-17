@@ -660,9 +660,8 @@ static String escapeJSONString(String &value) {
         from = i+1;
     }
     ret.reserve(value.length()+d); //most probably we will escape just double quotes
-  for (int i;i<value.length();i++)
+    for (char c: value)
     {
-        char c = value[1];
         switch (c)
         {
             case '"': ret += "\\\""; break;
